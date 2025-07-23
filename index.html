@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Online Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>LearnHub</span>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#progress">My Progress</a></li>
+                <li><a href="#account">Account</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn login-btn">Login</button>
+            <button class="btn signup-btn">Sign Up</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Learn Without Limits</h1>
+                <p>Start, switch, or advance your career with our courses and certificates.</p>
+                <button class="btn primary-btn">Browse Courses</button>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/learning.svg" alt="Online Learning">
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses-section">
+            <h2>Popular Courses</h2>
+            <div class="course-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Programming</button>
+                <button class="filter-btn">Design</button>
+                <button class="filter-btn">Business</button>
+            </div>
+            <div class="course-grid">
+                <!-- Course cards will be added dynamically with JavaScript -->
+            </div>
+        </section>
+
+        <!-- Video Player Section -->
+        <section class="video-section hidden">
+            <div class="video-container">
+                <div class="video-player">
+                    <video id="lesson-video" controls>
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-info">
+                        <h3 id="video-title">Lesson Title</h3>
+                        <p id="video-description">Lesson description goes here.</p>
+                    </div>
+                </div>
+                <div class="lesson-sidebar">
+                    <h4>Course Content</h4>
+                    <ul class="lesson-list">
+                        <!-- Lessons will be added dynamically -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section hidden">
+            <div class="quiz-container">
+                <h3 id="quiz-title">Quiz: JavaScript Basics</h3>
+                <div class="quiz-progress">
+                    <span>Question <span id="current-question">1</span> of <span id="total-questions">5</span></span>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                <div class="quiz-question">
+                    <p id="question-text">What is the correct way to declare a variable in JavaScript?</p>
+                    <div class="quiz-options">
+                        <!-- Options will be added dynamically -->
+                    </div>
+                </div>
+                <div class="quiz-navigation">
+                    <button class="btn secondary-btn prev-btn" disabled>Previous</button>
+                    <button class="btn primary-btn next-btn">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Tracking Section -->
+        <section id="progress" class="progress-section">
+            <h2>My Learning Progress</h2>
+            <div class="progress-container">
+                <div class="progress-card">
+                    <h3>Course Completion</h3>
+                    <div class="completion-chart">
+                        <div class="circle-progress" data-percent="65">
+                            <svg class="progress-ring" width="120" height="120">
+                                <circle class="progress-ring-circle" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                            </svg>
+                            <span class="progress-text">65%</span>
+                        </div>
+                    </div>
+                    <p>You've completed 65% of your enrolled courses</p>
+                </div>
+                <div class="progress-details">
+                    <h3>Recent Activity</h3>
+                    <ul class="activity-list">
+                        <li>
+                            <i class="fas fa-play-circle"></i>
+                            <span>Completed "JavaScript Variables" lesson</span>
+                            <span class="activity-time">2 hours ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-question-circle"></i>
+                            <span>Scored 80% on "HTML Basics" quiz</span>
+                            <span class="activity-time">1 day ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-book"></i>
+                            <span>Started "CSS Flexbox" course</span>
+                            <span class="activity-time">3 days ago</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>LearnHub</h4>
+                <p>Empowering learners worldwide with accessible, high-quality education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#progress">Progress</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@learnhub.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 LearnHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login/Signup Modal -->
+    <div class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="auth-forms">
+                <div class="login-form">
+                    <h3>Login</h3>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Login</button>
+                    </form>
+                </div>
+                <div class="signup-form">
+                    <h3>Sign Up</h3>
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" required>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
